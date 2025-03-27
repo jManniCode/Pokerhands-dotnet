@@ -1,4 +1,6 @@
-﻿namespace CardGame;
+﻿using System.Net.Security;
+
+namespace CardGame;
 public class Card
 {
     public char Suit { get; }
@@ -15,3 +17,4 @@ public class Card
         return $"{Rank}{Suit}";
     }
 }
+
