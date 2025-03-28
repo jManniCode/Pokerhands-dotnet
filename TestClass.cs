@@ -50,9 +50,9 @@ public class PokerTest
 
         var result = CompareHands.IsTwoPair(twoPairHand);
 
-        Assert.NotNull(result);
-
-        Assert.Equal(twoPairHand, result);
+        Assert.NotNull(result.hand);
+        Assert.Equal(twoPairHand, result.hand);
+        Assert.Equal("Two Pair", result.handType);
     }
 
     [Fact]
@@ -81,10 +81,11 @@ public class PokerTest
         var noFlush = CompareHands.IsFlush(nonFlushHand);
 
  
-        Assert.NotNull(isFlushHand);
-        Assert.Equal(flushHand, isFlushHand);
+        Assert.NotNull(isFlushHand.hand);
+        Assert.Equal(flushHand, isFlushHand.hand);
 
-        Assert.Null(noFlush);
+        Assert.Null(noFlush.hand);
+        Assert.Null(noFlush.handType);
     }
 }
 
