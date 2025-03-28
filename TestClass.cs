@@ -77,12 +77,12 @@ public class PokerTest
             });
 
       
-        var flush = CompareHands.IsFlush(flushHand);
+        var isFlushHand = CompareHands.IsFlush(flushHand);
         var noFlush = CompareHands.IsFlush(nonFlushHand);
 
  
-        Assert.NotNull(flush);
-        Assert.Equal(flushHand, flush);
+        Assert.NotNull(isFlushHand);
+        Assert.Equal(flushHand, isFlushHand);
 
         Assert.Null(noFlush);
     }
